@@ -59,8 +59,10 @@ int main(){
 	int32_t addrlen = sizeof(sockaddr_in);
 
 	timer.tv_sec = 0;
-	timer.tv_nsec = 500000000L;
-	
+	timer.tv_nsec = 100000000L;
+
+
+
    for(int i = 1; i < 255; i++){
       printf("scaning : %d.%d.%d.%d\n" , add_ptr[0] , add_ptr[1],add_ptr[2], add_ptr[3] );
       
@@ -89,4 +91,4 @@ int main(){
 	
 	syscall(3,socket_fd);
 	return 0;
-}
+	}
